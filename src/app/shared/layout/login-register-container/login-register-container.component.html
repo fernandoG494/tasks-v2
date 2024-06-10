@@ -1,3 +1,18 @@
 <div class="form-container">
-  <ng-content />
+  <div class="form-wrapper">
+    <div>Tasks</div>
+    <div class="nav-container">
+      <mat-tab-group
+        dynamicHeight
+        mat-stretch-tabs="false"
+        mat-align-tabs="center"
+      >
+        <mat-tab label="Login">
+          <ng-content />
+        </mat-tab>
+        <mat-tab label="Register"> Content 2 </mat-tab>
+      </mat-tab-group>
+    </div>
+  </div>
+  <div class="form-image-wrapper"></div>
 </div>

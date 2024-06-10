@@ -1,14 +1,56 @@
 @import "../../../../styles/breakpoints.scss";
 
 .form-container {
-  margin-left: auto;
-  margin-right: auto;
+  height: 100%;
+  display: flex;
+  color: #fff5ea;
 
-  background-color: aqua;
-  max-width: 40%;
+  @include respond-from-to(0px, $breakpoint-mobile) {
+    background: url("https://c.wallhere.com/photos/66/55/3840x2400_px_Canada_clouds_Dark_forest_Hill_landscape_lines-684823.jpg!d")
+      no-repeat center center;
+    background-size: cover;
+    flex-direction: column;
+    min-width: 320px;
+    position: relative;
 
-  // for smaller screens
-  @media (max-width: $screen-sm-min) {
-    max-width: 100%;
+    &::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background: inherit;
+      filter: blur(10px);
+    }
   }
+
+  @include respond-from-to($breakpoint-mobile + 1px, 9999px) {
+    background-color: #161b33;
+    flex-direction: row;
+  }
+}
+
+.form-wrapper {
+  @include respond-from-to(0px, $breakpoint-mobile) {
+    width: 100%;
+  }
+
+  @include respond-from-to($breakpoint-mobile + 1px, 9999px) {
+    width: 40%;
+    max-width: 500px;
+  }
+}
+
+.form-image-wrapper {
+  @include respond-from-to($breakpoint-mobile + 1px, 9999px) {
+    flex: 1;
+    background: url("https://c.wallhere.com/photos/66/55/3840x2400_px_Canada_clouds_Dark_forest_Hill_landscape_lines-684823.jpg!d")
+      no-repeat center center;
+    background-size: cover;
+  }
+}
+
+.mdc-tab__text-label {
+  color: #fff5ea !important;
 }

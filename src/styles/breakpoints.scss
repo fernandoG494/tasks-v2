@@ -1,4 +1,12 @@
-$screen-sm-min: 576px;
-$screen-md-min: 768px;
-$screen-lg-min: 992px;
-$screen-xl-min: 1200px;
+// Variables for breakpoints
+$breakpoint-mobile: 425px;
+$breakpoint-tablet: 600px; // móviles
+$breakpoint-desktop: 768px; // tablets
+$breakpoint-desktop-xl: 1024px; // escritorio
+
+// Mixin for media queries with min-width and max-width
+@mixin respond-from-to($min, $max) {
+  @media (min-width: #{$min}) and (max-width: #{$max}) {
+    @content;
+  }
+}
