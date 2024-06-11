@@ -38,7 +38,8 @@
   }
 
   @include respond-from-to($breakpoint-mobile + 1px, 9999px) {
-    max-width: 500px;
+    max-width: 300px;
+    min-width: 250px;
     width: 40%;
   }
 }

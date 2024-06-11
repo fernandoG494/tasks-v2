@@ -1,15 +1,12 @@
 @import "../../../../styles/breakpoints.scss";
 
 .register-container {
-  padding: 0 20px 10px 20px;
-}
-
-.register-title {
-  padding-top: 20px;
+  padding: 30px 20px;
 }
 
 .form-input {
   border-radius: 5px;
+  border: 1px solid #647a81;
   border: none;
   bottom: 14px;
   height: 34px;
@@ -17,10 +14,10 @@
   outline: none;
   padding: 0 10px;
   right: 9px;
-  border: 1px solid #647a81;
+  width: calc(100% - 30px);
 
   &:focus {
-    border: 2px solid #32c3f2;
+    border: 2px solid #2764f3;
   }
 
   &:focus::placeholder {
@@ -29,51 +26,30 @@
 }
 
 .form-text {
-  font-weight: 600;
   margin-bottom: 10px;
-}
-
-.forgot-text {
-  font-weight: 600;
-  margin-bottom: 10px;
-  font-size: 15px;
-}
-
-.login-text {
-  font-weight: 600;
-  font-size: 15px;
-}
-
-.login-section {
-  margin-bottom: 10px;
-}
-
-.login-link {
-  cursor: pointer;
-  color: blue;
-  text-decoration: underline;
 }
 
 .register-button {
+  background-color: #2764f3;
   border-radius: 5px;
   border: none;
   bottom: 14px;
+  color: #f3f6f4;
   height: 34px;
   margin-bottom: 10px;
   outline: none;
   padding: 0 10px;
   right: 9px;
-  background-color: #444444;
-  color: #f3f6f4;
   transition: background-color 0.3s ease, color 0.3s ease;
+  width: calc(100% - 11px);
 
   &:hover {
     cursor: pointer;
   }
 
   &:disabled {
-    background-color: #eeeeee;
-    color: #0d0d0d;
+    background-color: #ededed;
+    color: #9a9a9a;
     cursor: not-allowed;
   }
 }
