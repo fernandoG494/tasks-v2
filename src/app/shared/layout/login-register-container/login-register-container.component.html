@@ -8,9 +8,11 @@
         mat-align-tabs="center"
       >
         <mat-tab label="Login">
-          <ng-content />
+          <ng-content select="[auth-login]"></ng-content>
         </mat-tab>
-        <mat-tab label="Register"> Content 2 </mat-tab>
+        <mat-tab label="Register">
+          <!-- <ng-content select="[auth-register]"></ng-content> -->
+        </mat-tab>
       </mat-tab-group>
     </div>
   </div>
