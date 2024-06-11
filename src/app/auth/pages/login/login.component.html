@@ -1,51 +1,49 @@
-<form [formGroup]="loginForm">
-  <div class="form-text">Email</div>
-  <input
-    type="text"
-    formControlName="email"
-    class="form-input"
-    placeholder="Your email here"
-  />
-  <div class="error-text">
-    <span *ngIf="isValidField('email')">
-      {{ getFieldError("email") }}
-    </span>
-  </div>
+<div class="login-container">
+  <form [formGroup]="loginForm">
+    <div class="form-text">Email</div>
+    <input
+      type="text"
+      formControlName="email"
+      class="form-input"
+      placeholder="Your email here"
+    />
+    <div class="error-text">
+      <span *ngIf="isValidField('email')">
+        {{ getFieldError("email") }}
+      </span>
+    </div>
 
-  <div class="form-text">Password</div>
-  <input
-    type="password"
-    formControlName="password"
-    class="form-input"
-    placeholder="Your password here"
-  />
-  <div class="error-text">
-    <span *ngIf="isValidField('password')">
-      {{ getFieldError("password") }}
-    </span>
-  </div>
+    <div class="form-text">Password</div>
+    <input
+      type="password"
+      formControlName="password"
+      class="form-input"
+      placeholder="Your password here"
+    />
+    <div class="error-text">
+      <span *ngIf="isValidField('password')">
+        {{ getFieldError("password") }}
+      </span>
+    </div>
 
-  <div>
-    <button
-      class="login-button"
-      (click)="onSubmit()"
-      [disabled]="buttonDisabled()"
+    <div>
+      <button
+        class="login-button"
+        (click)="onSubmit()"
+        [disabled]="buttonDisabled()"
+      >
+        Login
+      </button>
+    </div>
+    <div
+      *ngIf="showLoginStatus()"
+      class="login-status"
+      [ngClass]="{
+        error: loginStatus.status == 'error',
+        success: loginStatus.status == 'success'
+      }"
     >
-      Login
-    </button>
-  </div>
-  <div
-    *ngIf="showLoginStatus()"
-    class="login-status"
-    [ngClass]="{
-      error: loginStatus.status == 'error',
-      success: loginStatus.status == 'success'
-    }"
-  >
-    {{ loginStatus.message }}
-  </div>
-
-  <div class="forgot-text">
-    Forgot your password? <a href="#">Click here</a>
-  </div>
-</form>
+      {{ loginStatus.message }}
+    </div>
+  </form>
+</div>

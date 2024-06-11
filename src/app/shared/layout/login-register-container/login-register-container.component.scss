@@ -1,9 +1,10 @@
 @import "../../../../styles/breakpoints.scss";
 
 .form-container {
-  height: 100%;
-  display: flex;
   color: #fff5ea;
+  display: flex;
+  height: 100%;
+  position: relative;
 
   @include respond-from-to(0px, $breakpoint-mobile) {
     background: url("https://c.wallhere.com/photos/66/55/3840x2400_px_Canada_clouds_Dark_forest_Hill_landscape_lines-684823.jpg!d")
@@ -14,14 +15,14 @@
     position: relative;
 
     &::before {
-      content: "";
-      position: absolute;
-      top: 0;
-      left: 0;
-      right: 0;
-      bottom: 0;
       background: inherit;
+      bottom: 0;
+      content: "";
       filter: blur(10px);
+      left: 0;
+      position: absolute;
+      right: 0;
+      top: 0;
     }
   }
 
@@ -37,17 +38,17 @@
   }
 
   @include respond-from-to($breakpoint-mobile + 1px, 9999px) {
-    width: 40%;
     max-width: 500px;
+    width: 40%;
   }
 }
 
 .form-image-wrapper {
   @include respond-from-to($breakpoint-mobile + 1px, 9999px) {
-    flex: 1;
     background: url("https://c.wallhere.com/photos/66/55/3840x2400_px_Canada_clouds_Dark_forest_Hill_landscape_lines-684823.jpg!d")
       no-repeat center center;
     background-size: cover;
+    flex: 1;
   }
 }
 

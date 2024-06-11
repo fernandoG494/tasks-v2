@@ -4,8 +4,9 @@
   padding: 0 20px 10px 20px;
 }
 
-.login-title {
-  padding-top: 20px;
+.form-text {
+  font-weight: 600;
+  margin-bottom: 10px;
 }
 
 .form-input {
@@ -26,32 +27,6 @@
   &:focus::placeholder {
     color: transparent;
   }
-}
-
-.form-text {
-  font-weight: 600;
-  margin-bottom: 10px;
-}
-
-.forgot-text {
-  font-weight: 600;
-  margin-bottom: 10px;
-  font-size: 15px;
-}
-
-.register-text {
-  font-weight: 600;
-  font-size: 15px;
-}
-
-.register-section {
-  margin-bottom: 10px;
-}
-
-.register-link {
-  cursor: pointer;
-  color: blue;
-  text-decoration: underline;
 }
 
 .login-button {
@@ -100,4 +75,8 @@
 .error {
   background-color: #fccdcd;
   border: 2px solid #a31919;
+}
+
+.login-container {
+  margin-top: 30px;
 }
