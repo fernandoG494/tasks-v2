@@ -1,6 +1,5 @@
 <div class="form-container">
   <div class="form-wrapper">
-    <div>Tasks</div>
     <div class="nav-container">
       <mat-tab-group
         dynamicHeight
@@ -8,10 +7,10 @@
         mat-align-tabs="center"
       >
         <mat-tab label="Login">
-          <ng-content select="[auth-login]"></ng-content>
+          <auth-login />
         </mat-tab>
         <mat-tab label="Register">
-          <!-- <ng-content select="[auth-register]"></ng-content> -->
+          <auth-register />
         </mat-tab>
       </mat-tab-group>
     </div>

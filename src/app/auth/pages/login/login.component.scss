@@ -1,0 +1,103 @@
+@import "../../../../styles/breakpoints.scss";
+
+.login-container {
+  padding: 0 20px 10px 20px;
+}
+
+.login-title {
+  padding-top: 20px;
+}
+
+.form-input {
+  border-radius: 5px;
+  border: none;
+  bottom: 14px;
+  height: 34px;
+  margin-bottom: 10px;
+  outline: none;
+  padding: 0 10px;
+  right: 9px;
+  border: 1px solid #647a81;
+
+  &:focus {
+    border: 2px solid #32c3f2;
+  }
+
+  &:focus::placeholder {
+    color: transparent;
+  }
+}
+
+.form-text {
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+
+.forgot-text {
+  font-weight: 600;
+  margin-bottom: 10px;
+  font-size: 15px;
+}
+
+.register-text {
+  font-weight: 600;
+  font-size: 15px;
+}
+
+.register-section {
+  margin-bottom: 10px;
+}
+
+.register-link {
+  cursor: pointer;
+  color: blue;
+  text-decoration: underline;
+}
+
+.login-button {
+  border-radius: 5px;
+  border: none;
+  bottom: 14px;
+  height: 34px;
+  margin-bottom: 10px;
+  outline: none;
+  padding: 0 10px;
+  right: 9px;
+  background-color: #444444;
+  color: #f3f6f4;
+  transition: background-color 0.3s ease, color 0.3s ease;
+
+  &:hover {
+    cursor: pointer;
+  }
+
+  &:disabled {
+    background-color: #eeeeee;
+    color: #0d0d0d;
+    cursor: not-allowed;
+  }
+}
+
+.error-text {
+  color: red;
+  font-size: smaller;
+  margin-bottom: 5px;
+}
+
+.login-status {
+  width: 100%;
+  padding: 10px;
+
+  border-radius: 10px;
+  font-size: smaller;
+}
+
+.success {
+  background-color: #cdfcce;
+  border: 2px solid #19a337;
+}
+
+.error {
+  background-color: #fccdcd;
+  border: 2px solid #a31919;
+}
